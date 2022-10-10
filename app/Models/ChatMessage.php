@@ -20,4 +20,10 @@ class ChatMessage extends Model
     {
         return $this->belongsTo(ChatRoom::class, 'chat_room_id', 'id');
     }
+
+    // belongsTo relationship with User
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id', 'id');
+    }
 }
