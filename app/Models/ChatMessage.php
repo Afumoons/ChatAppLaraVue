@@ -15,4 +15,9 @@ class ChatMessage extends Model
         'message',
     ];
 
+    // belongsTo relationship with ChatRoom
+    public function chatRoom()
+    {
+        return $this->belongsTo(ChatRoom::class, 'chat_room_id', 'id');
+    }
 }
