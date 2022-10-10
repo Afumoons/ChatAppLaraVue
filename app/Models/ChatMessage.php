@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class ChatMessage extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'chat_room_id',
+        'user_id',
+        'message',
+    ];
+
 }
